@@ -1,0 +1,448 @@
+/* CSS cho trang rút học phần */
+
+/* Tiêu đề trang */
+.page-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.page-title i {
+  margin-right: 0.5rem;
+  color: #f44336;
+}
+
+/* Thông tin chung */
+.withdraw-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-item {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.info-label {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin-bottom: 0.5rem;
+}
+
+.info-value {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.info-value.status-active {
+  color: #27ae60;
+}
+
+/* Thông báo quan trọng */
+.important-notice {
+  display: flex;
+  background-color: #fff8e1;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.notice-icon {
+  font-size: 2rem;
+  color: #ffc107;
+  margin-right: 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.notice-content h3 {
+  font-size: 1.2rem;
+  color: #f57c00;
+  margin-bottom: 0.8rem;
+}
+
+.notice-content ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.notice-content li {
+  margin-bottom: 0.5rem;
+  color: #5d4037;
+}
+
+.notice-content li:last-child {
+  margin-bottom: 0;
+}
+
+/* Danh sách học phần đã đăng ký */
+.registered-courses {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.course-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+.course-table th {
+  background-color: #f8f9fa;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  color: #34495e;
+  border-bottom: 2px solid #ddd;
+}
+
+.course-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+}
+
+.course-row {
+  transition: background-color 0.3s;
+}
+
+.course-row:hover {
+  background-color: #f5f9ff;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status-badge.active {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-badge.pending {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.status-badge.completed {
+  background-color: #e3f2fd;
+  color: #1565c0;
+}
+
+.withdraw-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.withdraw-btn i {
+  margin-right: 0.3rem;
+}
+
+.withdraw-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Lịch sử rút học phần */
+.withdraw-history {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th {
+  background-color: #f8f9fa;
+  padding: 0.8rem;
+  text-align: left;
+  font-weight: 600;
+  color: #34495e;
+  border-bottom: 2px solid #ddd;
+}
+
+.history-table td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #eee;
+  color: #2c3e50;
+}
+
+.history-row {
+  transition: background-color 0.3s;
+}
+
+.history-row:hover {
+  background-color: #f5f9ff;
+}
+
+/* Modal xác nhận rút học phần */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  margin: 5% auto;
+  padding: 0;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+.close-modal {
+  color: #aaa;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-modal:hover {
+  color: #2c3e50;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.warning-box {
+  display: flex;
+  background-color: #ffebee;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.warning-icon {
+  font-size: 1.5rem;
+  color: #f44336;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.warning-text {
+  flex: 1;
+}
+
+.warning-text p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #c62828;
+}
+
+.warning-text ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.warning-text li {
+  margin-bottom: 0.3rem;
+  color: #5d4037;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #34495e;
+}
+
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancel-btn {
+  background-color: #f8f9fa;
+  color: #2c3e50;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.cancel-btn:hover {
+  background-color: #e9ecef;
+}
+
+.confirm-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+}
+
+.confirm-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Modal thông báo kết quả */
+.result-modal {
+  max-width: 500px;
+}
+
+.result-icon {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.result-icon.success {
+  color: #4caf50;
+}
+
+.result-message {
+  text-align: center;
+}
+
+.result-message p {
+  margin-bottom: 0.8rem;
+}
+
+.close-btn {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.5rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  margin: 0 auto;
+  display: block;
+}
+
+.close-btn:hover {
+  background-color: #3a7bc8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .withdraw-info {
+    flex-direction: column;
+  }
+  
+  .course-table,
+  .history-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .modal-content {
+    width: 95%;
+    margin: 10% auto;
+  }
+  
+  .warning-box {
+    flex-direction: column;
+  }
+  
+  .warning-icon {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+    justify-content: center;
+  }
+}

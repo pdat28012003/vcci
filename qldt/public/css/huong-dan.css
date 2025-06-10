@@ -1,0 +1,253 @@
+/**********************************************
+ * PHẦN HƯỚNG DẪN SỬ DỤNG
+ **********************************************/
+.guide-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.guide-section {
+  margin-bottom: 30px;
+  background-color: white;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.guide-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #333;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.guide-content {
+  color: #555;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.guide-content p {
+  margin-bottom: 15px;
+}
+
+.guide-content ul,
+.guide-content ol {
+  margin-bottom: 15px;
+  padding-left: 20px;
+}
+
+.guide-content li {
+  margin-bottom: 8px;
+}
+
+.guide-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin: 15px 0;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.guide-content .highlight {
+  background-color: #fff8e1;
+  padding: 15px;
+  border-left: 4px solid #ffc107;
+  margin-bottom: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.guide-content .note {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-left: 4px solid #2196f3;
+  margin-bottom: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+.guide-content .warning {
+  background-color: #ffebee;
+  padding: 15px;
+  border-left: 4px solid #f44336;
+  margin-bottom: 15px;
+  border-radius: 0 5px 5px 0;
+}
+
+/* Accordion cho hướng dẫn */
+.guide-accordion {
+  margin-bottom: 20px;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+  background-color: #f8f9fa;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background-color: #f1f1f1;
+}
+
+.accordion-header:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  color: #0066cc;
+  font-size: 16px;
+}
+
+.accordion-item.active .accordion-header:after {
+  content: "\f106";
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: white;
+  border-top: 1px solid #eee;
+}
+
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Tabs cho hướng dẫn */
+.guide-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.guide-tab {
+  padding: 10px 20px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #555;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s;
+}
+
+.guide-tab:hover {
+  color: #0066cc;
+}
+
+.guide-tab.active {
+  color: #0066cc;
+  border-bottom-color: #0066cc;
+}
+
+.tab-pane {
+  display: none;
+}
+
+.tab-pane.active {
+  display: block;
+}
+
+/* Bước hướng dẫn */
+.guide-steps {
+  counter-reset: step;
+}
+
+.guide-step {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 25px;
+}
+
+.guide-step:before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 35px;
+  height: 35px;
+  background-color: #0066cc;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.guide-step-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.guide-step-content {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Video hướng dẫn */
+.guide-video {
+  margin-bottom: 25px;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-title {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive cho hướng dẫn */
+@media (max-width: 768px) {
+  .guide-section {
+    padding: 15px;
+  }
+
+  .guide-title {
+    font-size: 18px;
+  }
+
+  .guide-content {
+    font-size: 14px;
+  }
+
+  .guide-step {
+    padding-left: 40px;
+  }
+
+  .guide-step:before {
+    width: 30px;
+    height: 30px;
+  }
+}

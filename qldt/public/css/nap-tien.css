@@ -1,0 +1,790 @@
+/* CSS cho trang nạp tiền vào tài khoản */
+
+/* Tiêu đề trang */
+.page-title {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #1e3056;
+  display: flex;
+  align-items: center;
+}
+
+.page-title i {
+  margin-right: 10px;
+  color: #1e3056;
+}
+
+/* Thông tin tài khoản */
+.account-info {
+  margin-bottom: 30px;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.info-header {
+  padding: 15px 20px;
+  background-color: #1e3056;
+  color: white;
+}
+
+.info-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.info-body {
+  padding: 20px;
+}
+
+.info-row {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-label {
+  width: 150px;
+  font-weight: 500;
+  color: #666;
+}
+
+.info-value {
+  flex: 1;
+  color: #333;
+}
+
+.info-value.balance {
+  font-weight: 600;
+  color: #4caf50;
+}
+
+/* Nạp tiền vào tài khoản */
+.deposit-section {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.deposit-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.deposit-form {
+  max-width: 600px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #333;
+}
+
+.amount-input {
+  position: relative;
+}
+
+.amount-input input {
+  width: 100%;
+  padding: 12px 15px;
+  padding-right: 50px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.amount-input input:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.amount-input .currency {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+}
+
+.amount-suggestions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.amount-btn {
+  padding: 8px 15px;
+  background-color: white;
+  color: #4a90e2;
+  border: 1px solid #4a90e2;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.amount-btn:hover {
+  background-color: #4a90e2;
+  color: white;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.payment-method {
+  display: flex;
+  align-items: center;
+}
+
+.payment-method input {
+  margin-right: 0;
+}
+
+.payment-method label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex: 1;
+  margin-bottom: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.payment-method label:hover {
+  background-color: #f5f5f5;
+}
+
+.payment-method input:checked + label {
+  border-color: #4a90e2;
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+.method-icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: #4a90e2;
+}
+
+.method-info {
+  margin-left: 10px;
+}
+
+.method-name {
+  font-weight: 500;
+  color: #333;
+}
+
+.method-desc {
+  font-size: 12px;
+  color: #666;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.cancel-btn {
+  padding: 12px 20px;
+  background-color: white;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+  background-color: #f5f5f5;
+}
+
+.cancel-btn i {
+  margin-right: 8px;
+}
+
+.deposit-btn {
+  padding: 12px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.deposit-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.deposit-btn:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.deposit-btn i {
+  margin-right: 8px;
+}
+
+/* Thông tin chuyển khoản */
+.bank-transfer-info {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.bank-transfer-info h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.bank-transfer-info h3 i {
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+.transfer-details {
+  margin-bottom: 20px;
+}
+
+.detail-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.detail-row:last-child {
+  margin-bottom: 0;
+}
+
+.detail-label {
+  width: 180px;
+  font-weight: 500;
+  color: #666;
+}
+
+.detail-value {
+  flex: 1;
+  color: #333;
+  font-weight: 500;
+}
+
+.copy-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: all 0.3s ease;
+}
+
+.copy-btn:hover {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.qr-code {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.qr-code img {
+  max-width: 200px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.qr-code p {
+  margin: 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.transfer-note {
+  margin-bottom: 20px;
+}
+
+.transfer-note h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff9800;
+  display: flex;
+  align-items: center;
+}
+
+.transfer-note h4 i {
+  margin-right: 8px;
+}
+
+.transfer-note ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.transfer-note ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.transfer-note ul li:last-child {
+  margin-bottom: 0;
+}
+
+.upload-receipt {
+  margin-top: 20px;
+}
+
+.upload-receipt h4 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.upload-receipt h4 i {
+  margin-right: 8px;
+  color: #4a90e2;
+}
+
+.upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+}
+
+.upload-area:hover,
+.upload-area.drag-over {
+  border-color: #4a90e2;
+  background-color: rgba(74, 144, 226, 0.05);
+}
+
+.upload-area i {
+  font-size: 32px;
+  color: #4a90e2;
+  margin-bottom: 10px;
+}
+
+.upload-area p {
+  margin: 0;
+  color: #666;
+}
+
+.upload-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.upload-btn {
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.upload-btn:hover {
+  background-color: #3a7bc8;
+}
+
+.upload-btn i {
+  margin-right: 8px;
+}
+
+/* Lịch sử nạp tiền */
+.deposit-history {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.deposit-history h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.history-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  display: flex;
+  align-items: center;
+}
+
+.filter-group label {
+  margin-right: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.filter-group select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.filter-group select:focus {
+  outline: none;
+  border-color: #4a90e2;
+}
+
+.history-table-container {
+  overflow-x: auto;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.history-table th,
+.history-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.history-table th {
+  background-color: #f9f9f9;
+  font-weight: 500;
+  color: #666;
+}
+
+.history-table tbody tr:hover {
+  background-color: #f5f9ff;
+}
+
+.history-row.success {
+  background-color: rgba(76, 175, 80, 0.05);
+}
+
+.history-row.pending {
+  background-color: rgba(255, 152, 0, 0.05);
+}
+
+.history-row.failed {
+  background-color: rgba(244, 67, 54, 0.05);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-badge.success {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+.status-badge.pending {
+  background-color: rgba(255, 152, 0, 0.1);
+  color: #ff9800;
+}
+
+.status-badge.failed {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}
+
+.action-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: white;
+  border: 1px solid #ddd;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+.action-btn.view-btn:hover {
+  background-color: #2196f3;
+  border-color: #2196f3;
+}
+
+.action-btn.download-btn:hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0 5px;
+  border-radius: 4px;
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.pagination a:hover {
+  background-color: #f5f5f5;
+}
+
+.pagination a.active {
+  background-color: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+}
+
+/* Modal chi tiết giao dịch */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: white;
+  margin: 10% auto;
+  padding: 0;
+  border-radius: 8px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+.modal-header {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal-header h3 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-header h3 i {
+  margin-right: 10px;
+  color: #2196f3;
+}
+
+.close-modal {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #999;
+}
+
+.close-modal:hover {
+  color: #333;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+.transaction-details {
+  margin-bottom: 20px;
+}
+
+/* Loading */
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+  width: 100%;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid rgba(74, 144, 226, 0.3);
+  border-radius: 50%;
+  border-top-color: #4a90e2;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Error */
+.error-container {
+  background-color: rgba(255, 76, 76, 0.1);
+  border-left: 4px solid #ff4c4c;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: #d32f2f;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .info-row {
+    flex-direction: column;
+  }
+
+  .info-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .detail-label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .copy-btn {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .history-filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filter-group {
+    width: 100%;
+  }
+
+  .filter-group select {
+    flex: 1;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .cancel-btn,
+  .deposit-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .amount-suggestions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .payment-method label {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .method-icon {
+    margin-bottom: 10px;
+  }
+
+  .method-info {
+    margin-left: 0;
+    text-align: center;
+  }
+}
